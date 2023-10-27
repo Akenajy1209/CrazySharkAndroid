@@ -12,7 +12,7 @@ public class BalaMov : MonoBehaviour
     void Update()
     {
         //Se traslada en su eje Z positivo
-        transform.Translate(Vector3.forward * velMovBala * Time.deltaTime);
+        transform.Translate(Vector3.up * velMovBala * Time.deltaTime);
         tiempo -= Time.deltaTime;
 
         if (tiempo <= 0f)
