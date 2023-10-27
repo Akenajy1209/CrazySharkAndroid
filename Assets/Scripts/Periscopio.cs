@@ -28,8 +28,8 @@ public class Periscopio : MonoBehaviour
         Vector3 newPosition = transform.position + new Vector3(combinedSpeed * movementSpeed * Time.deltaTime, 0, 0);
 
         // Limita la posición en el eje X para evitar que el objeto salga de la pantalla
-        float minX = -3.0f; // Establece el valor mínimo
-        float maxX = 3.0f;  // Establece el valor máximo
+        float minX = -2.4f; // Establece el valor mínimo
+        float maxX = 2.4f;  // Establece el valor máximo
         newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX);
 
         // Establece la nueva posición del objeto
