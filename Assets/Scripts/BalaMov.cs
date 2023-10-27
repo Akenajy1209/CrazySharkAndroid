@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class BalaMov : MonoBehaviour
 {
-    public float velMovBala;
+    public float velMovBala=2f;
     private float tiempo=0.5f;
 
     // Update is called once per frame
@@ -36,7 +36,14 @@ public class BalaMov : MonoBehaviour
         }
         if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            velMovBala = 10f;
+            // Desactiva el BoxCollider
+            BoxCollider boxCollider = GetComponent<BoxCollider>(); // Obtiene el componente BoxCollider del objeto
+           if (boxCollider != null)
+              {
+                    boxCollider.enabled = false; // Desactiva el BoxCollider
+           }
         }
+        
     }
 }
