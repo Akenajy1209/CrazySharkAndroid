@@ -8,9 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
     public int vidaMax;
     public float vidaActual;
     public Image ImagenBarraVida;
-    private PositionBehavier Datos;
-    private TimeController DatosTiempo; 
-
+    
     //Sonido
     //public AudioClip sonidoDano;
     //public AudioClip sonidoMuerte;
@@ -20,20 +18,14 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         //Datos = GameObject.FindWithTag("Player").GetComponent<PositionBehavier>();
-        DatosTiempo = GameObject.FindWithTag("Player").GetComponent<TimeController>();
+        //DatosTiempo = GameObject.FindWithTag("Player").GetComponent<TimeController>();
         vidaActual = vidaMax;
         //audio = GetComponent<AudioSource>();
     }
     void Update()
     {
         RevisarVida();
-        if (vidaActual <= 0 /*|| DatosTiempo.TiempoActual == 0*/)
-        {
-            
-            Debug.Log("Perdio");
-            SceneManager.LoadScene(4);
-            
-        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
