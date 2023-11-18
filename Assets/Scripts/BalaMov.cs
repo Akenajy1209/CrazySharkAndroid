@@ -7,10 +7,15 @@ public class BalaMov : MonoBehaviour
 {
     public float velMovBala=2f;
     private float tiempo=0.5f;
-
+    private AudioSource audio;
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
+
         //Se traslada en su eje Z positivo
         transform.Translate(Vector3.up * velMovBala * Time.deltaTime);
         tiempo -= Time.deltaTime;
@@ -36,6 +41,7 @@ public class BalaMov : MonoBehaviour
         }
         if (other.CompareTag("Player"))
         {
+            audio.Play();
             velMovBala = 10f;
             // Desactiva el BoxCollider
             BoxCollider boxCollider = GetComponent<BoxCollider>(); // Obtiene el componente BoxCollider del objeto
