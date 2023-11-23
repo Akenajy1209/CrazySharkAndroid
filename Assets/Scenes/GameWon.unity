@@ -1012,7 +1012,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1136778515}
         m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
-        m_MethodName: VolverMenu
+        m_MethodName: CerrarJuego
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1146,7 +1146,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1136778515}
         m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
-        m_MethodName: LevelOption
+        m_MethodName: VolverMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

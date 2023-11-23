@@ -15,21 +15,17 @@ public class MenuInicial : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    public void LevelOption()
+    public void CargarNvlOne()
     {
         SceneManager.LoadScene(1);
     }
-    public void CargarNvlOne()
+    public void GameOver()
     {
         SceneManager.LoadScene(2);
     }
-    public void CargarNvlTwo()
-    {
-        SceneManager.LoadScene(3);
-    }
     public void Gamewin()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(3);
     }
     
 }
