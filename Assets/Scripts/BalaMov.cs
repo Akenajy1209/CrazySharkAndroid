@@ -7,10 +7,10 @@ public class BalaMov : MonoBehaviour
 {
     public float velMovBala=2f;
     private float tiempo=0.5f;
-    private AudioSource audio;
+    // AudioSource audio;
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
+        //audio = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerData = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
+        PlayerData = GameObject.Find("Player").GetComponent<PlayerBehaviour>();
         DatosTiempo = GameObject.Find("Canvas").GetComponent<TimeController>();
       
     }

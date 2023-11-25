@@ -14,13 +14,13 @@ public class PlayerMovement : MonoBehaviour
         float gyroX = -Input.gyro.rotationRateUnbiased.z;
 
         // Obtén la aceleración en el eje X utilizando el acelerómetro
-        float accelX = Input.acceleration.z;
+        //float accelX = Input.acceleration.z;
 
         // Puedes ajustar la velocidad de movimiento aquí
         float movementSpeed = 5.0f;
 
         // Calcula la velocidad de movimiento combinando el giroscopio y el acelerómetro
-        float combinedSpeed = gyroX + accelX;
+        float combinedSpeed = gyroX ;
 
         // Calcula la nueva posición en función de la velocidad
         Vector3 newPosition = transform.position + new Vector3(combinedSpeed * movementSpeed * Time.deltaTime, 0, 0);
@@ -34,3 +34,4 @@ public class PlayerMovement : MonoBehaviour
         transform.position = newPosition;
     }
 }
+
